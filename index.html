@@ -3,153 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja Strona</title>
+    <title>Moja Stronka</title>
     <style>
         * {
             box-sizing: border-box;
         }
 
         body {
-            font-family: Verdana, sans-serif;
+            font-family: Arial, sans-serif;
+            margin: 0;
             padding: 0;
-            margin: 0;
         }
 
-        .top-bar {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
+        .header {
+            background-color: #5a5a97;
+            color: white;
+            padding: 24px;
             text-align: center;
         }
 
-        .top-bar h1 {
+        .header h1 {
             margin: 0;
-            font-size: 2.2em;
+            font-size: 2.5em;
         }
 
-        .menu {
+        .navbar {
             display: flex;
-            flex-direction: row;
-            background-color: #b30b0b;
-            justify-content: space-around;
+            justify-content: center;
+            background-color: #c50c0c;
+            flex-wrap: wrap;
         }
 
-        .menu a {
-            color: #fff;
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
             text-align: center;
-            padding: 15px;
             text-decoration: none;
-            flex-grow: 1;
+            display: block;
         }
 
-        .menu a:hover {
-            background-color: #94094b;
-            color: #000;
+        .navbar a:hover {
+            background-color: #c70f68;
+            color: black;
         }
 
-        .content {
+        
+
+        .column {
+            padding: 10px;
+        }
+
+        .column.middle {
+            flex: 70%;
+            background-color: #e47272;
+        }
+        
+        .column.side {
+            flex: 30%;
+            background-color: #dd3b3b;
+        }
+
+
+        .row {
             display: flex;
             flex-wrap: wrap;
-            margin: 10px;
+            padding: 0 10px;
         }
 
-        .content .main {
-            flex: 70%;
-            background-color: #e48484;
-            padding: 15px;
-        }
-
-        .content .sidebar {
-            flex: 30%;
-            background-color: #db4c4c;
-            padding: 15px;
-        }
-
-        .img-box {
-            background-color: #8c8585;
-            height: 130px;
+        .image-placeholder {
             width: 100%;
-            margin-bottom: 20px;
+            height: 150px;
+            background-color: #aa9a9a;
+            margin-bottom: 15px;
         }
 
-        .bottom {
-            background-color: #222;
-            color: #fff;
+        .footer {
+            padding: 20px;
             text-align: center;
-            padding: 25px;
-            margin-top: 25px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
         }
 
         @media screen and (max-width: 900px) {
-            .content .main {
-                order: 2;
+            .column.middle {
                 flex: 100%;
-            }
-
-            .content .sidebar {
                 order: 1;
+            }
+            .column.side {
                 flex: 100%;
+                order: 2;
             }
         }
 
         @media screen and (max-width: 600px) {
-            .top-bar h1 {
-                font-size: 1.6em;
+            .header h1 {
+                font-size: 1.8em;
             }
 
-            .menu {
+            .column.side, .column.middle {
+                flex: 100%;
+            }
+
+            .image-placeholder {
+                height: 120px;
+            }
+            .navbar {
                 flex-direction: column;
             }
 
-            .menu a {
-                padding: 12px;
-            }
-
-            .img-box {
-                height: 100px;
+            .navbar a {
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <h1>Responsive Page Example</h1>
+    <div class="header">
+        <h1>Moja responsywna strona</h1>
+
     </div>
 
-    <nav class="menu">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </nav>
+    <div class="navbar">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
 
-    <div class="content">
-        <div class="sidebar">
-            <h2>About Me</h2>
-            <div class="img-box"></div>
-            <p>Here is some info about me.</p>
+    <div class="row">
+        <div class="column side">
+            <h2>O mnie</h2>
+            <p>Zdjecie:</p>
+            <div class="image-placeholder"></div>
+            <p>Some text about me</p>
 
-            <h3>Additional Info</h3>
-            <div class="img-box"></div>
-            <div class="img-box"></div>
-            <div class="img-box"></div>
+            <h3>Wiecej tekstu</h3>
+            <p></p>
+            <div class="image-placeholder"></div>
+            <div class="image-placeholder"></div>
+            <div class="image-placeholder"></div>
         </div>
 
-        <div class="main">
-            <h2>Main Heading</h2>
-            <div class="img-box"></div>
-            <p>Main content goes here.</p>
+        <div class="column middle">
+            <h2>Tytuł Headera</h2>
+            <p>desc</p>
+            <div class="image-placeholder"></div>
+            <p>jakis tekst</p>
 
-            <h2>Another Heading</h2>
-            <div class="img-box"></div>
-            <p>Some additional content.</p>
+            <h2>Tytuł Headera</h2>
+            <p>desc</p>
+            <div class="image-placeholder"></div>
+            <p>jakis tekst</p>
         </div>
     </div>
 
-    <footer class="bottom">
-        <h2>Footer Content</h2>
-    </footer>
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
 
 </body>
 </html>
