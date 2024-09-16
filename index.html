@@ -16,9 +16,9 @@
         }
 
         .header {
-            background-color: #bf9200;
+            background-color: #5a5a97;
             color: white;
-            padding: 20px;
+            padding: 24px;
             text-align: center;
         }
 
@@ -30,7 +30,7 @@
         .navbar {
             display: flex;
             justify-content: center;
-            background-color: #333;
+            background-color: #c50c0c;
             flex-wrap: wrap;
         }
 
@@ -43,7 +43,7 @@
         }
 
         .navbar a:hover {
-            background-color: #ddd;
+            background-color: #c70f68;
             color: black;
         }
 
@@ -54,23 +54,23 @@
         }
 
         .column {
-            padding: 15px;
+            padding: 10px;
         }
 
         .column.side {
             flex: 30%;
-            background-color: #f4f4f4;
+            background-color: #dd3b3b;
         }
 
         .column.middle {
             flex: 70%;
-            background-color: #fff;
+            background-color: #e47272;
         }
 
         .image-placeholder {
             width: 100%;
             height: 150px;
-            background-color: #cccccc;
+            background-color: #aa9a9a;
             margin-bottom: 15px;
         }
 
@@ -83,13 +83,13 @@
         }
 
         @media screen and (max-width: 900px) {
-            .column.side {
-                flex: 100%;
-                order: 2;
-            }
             .column.middle {
                 flex: 100%;
                 order: 1;
+            }
+            .column.side {
+                flex: 100%;
+                order: 2;
             }
         }
 
