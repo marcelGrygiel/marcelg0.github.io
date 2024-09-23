@@ -8,11 +8,11 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    color: #25293d;
 }
 
 header {
-    background-color: #333;
+    background-color: #25293d;
     padding: 10px 0;
     text-align: center;
 }
@@ -62,12 +62,12 @@ header nav ul li a {
 .price {
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: #25293d;
 }
 
 .btn {
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #25293d;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -79,7 +79,7 @@ header nav ul li a {
 }
 
 footer {
-    background-color: #333;
+    background-color: #25293d;
     color: #fff;
     text-align: center;
     padding: 10px 0;
